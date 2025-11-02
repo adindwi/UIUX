@@ -295,7 +295,7 @@
   justify-content: center;       /* Tengah */
   align-items: flex-start;
   flex-wrap: nowrap;             /* 1 baris saja */
-  gap: 100px;                     /* jarak antar card */
+  gap: 50px;                     /* jarak antar card */
   overflow-x: auto;              /* bisa digeser kalau kepanjangan */
   padding: 30px 50px;
   scroll-behavior: smooth;
@@ -596,6 +596,7 @@
       bottom: var(--distance, 10rem);
     }
   }
+
 
 
 
