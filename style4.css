@@ -1,0 +1,843 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Navbar */
+header {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 60px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: 90px; /* tinggi navbar */
+}
+
+/* Logo */
+.logo img {
+  height: 120px; /* ukuran logo besar */
+  width: auto;
+  position: absolute;
+  top: 40%; /* posisi vertikal logo */
+  transform: translateY(-50%);
+}
+
+/* Navigasi */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #004aad;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: #00a86b;
+}
+
+/* Warna tambahan opsional */
+.green { color: #00a86b; }
+.blue { color: #004aad; }
+
+/* Hero Section */
+/* HERO SECTION */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url("asset/banner_penyewaan.jpg") center center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+/* Lapisan gradasi lembut */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 74, 173, 0.4),
+    rgba(255, 255, 255, 0.5)
+  );
+  z-index: 1;
+}
+
+/* Konten di atas gambar */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  text-align: center;
+  max-width: 700px;
+  padding: 0 20px;
+  animation: fadeInUp 1.5s ease-out;
+}
+
+.hero-content h1 {
+  max-width: 600px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  
+  opacity: 0.9;
+  text-align: left;
+
+}
+
+.judul-gallery {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  color: #2d5f3f;
+  margin-bottom: 30px;
+  margin-top: 50px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Tombol CTA */
+.btn-hero {
+  display: inline-block;
+  padding: 12px 30px;
+  background: #24baeb;
+  color: white;
+  font-weight: 600;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-hero:hover {
+  transform: scale(1.05);
+  background: #91bac8;
+}
+
+/* Animasi muncul halus */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .btn-hero {
+    padding: 10px 25px;
+    font-size: 0.9rem;
+  }
+}
+
+/* About Section */
+.about {
+  background: linear-gradient(135deg, #ffffff 50%, #e0f7fa 100%);
+  padding: 80px 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  max-width: 1200px;
+  flex-wrap: wrap;
+}
+
+.about-image {
+  flex: 1;
+  text-align: center;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 480px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s ease;
+}
+
+.about-image img:hover {
+  transform: scale(1.05);
+}
+
+.about-content {
+  flex: 1;
+}
+
+.about-content h2 {
+  font-size: 2.3em;
+  color: #004aad;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.about-content h2::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background: #00a86b;
+  border-radius: 2px;
+}
+
+.about-content p {
+  font-size: 1.05em;
+  color: #333;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+/* Gallery Section */
+.gallery {
+  background: linear-gradient(to bottom, #ffffff, #ffffff);
+  padding: 3rem 2rem;
+}
+
+.gallery-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.gallery-item {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  height: 400px;
+  box-shadow: 0px 1px 13px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 120ms;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  padding: 0.5em;
+  padding-bottom: 3.4em;
+  margin: 0 auto;
+}
+
+.gallery-item::after {
+  content: attr(data-name);
+  padding-top: 1.25em;
+  padding-left: 1.25em;
+  position: absolute;
+  left: 0;
+  bottom: -60px;
+  background: #00ac7c;
+  color: #fff;
+  height: 2.5em;
+  width: 100%;
+  transition: all 80ms;
+  font-weight: 600;
+  text-transform: uppercase;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.gallery-item:hover::after {
+  bottom: 0;
+  opacity: 1;
+}
+
+.gallery-item:active {
+  transform: scale(0.98);
+}
+
+.gallery-item:active::after {
+  content: "Dipilih!";
+  height: 3.125em;
+}
+
+.image-container {
+  background: rgb(241, 241, 241);
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-caption {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.9em;
+  position: absolute;
+  left: 0.625em;
+  bottom: 1.875em;
+  font-weight: 600;
+  color: #000;
+}
+
+.gallery-price {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 1.1em;
+  position: absolute;
+  left: 0.625em;
+  bottom: 0.625em;
+  color: #00ac7c;
+  font-weight: bold;
+}
+
+/* Description Section with Card Effect */
+.description {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  background: #f5f5f5;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1000px;
+  padding: 2px;
+  border-radius: 24px;
+  overflow: hidden;
+  line-height: 1.6;
+  transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 34px;
+  border-radius: 22px;
+  color: #ffffff;
+  overflow: hidden;
+  background: #ffffff;
+  transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+  width: 100%;
+}
+
+.content .heading {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.3;
+  z-index: 1;
+  transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+  text-align: center;
+  width: 100%;
+  text-transform: uppercase;
+}
+
+.content .para {
+  z-index: 1;
+  opacity: 0.8;
+  font-size: 18px;
+  transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+  text-align: justify;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  height: 300%;
+  width: 300%;
+  border-radius: inherit;
+  background: linear-gradient(135deg, #00c6ff, #0a3cff);
+  transform-origin: center;
+  animation: moving 8s linear infinite paused;
+  transition: all 1s ease;
+  filter: blur(20px);
+  opacity: 0.9;
+}
+.card:hover::before {
+  animation-play-state: running;
+  z-index: -1;
+  width: 150%;
+  height: 150%;
+  opacity: 1;
+}
+
+.card:hover .content .heading,
+.card:hover .content .para {
+  color: #000000;
+}
+
+.card:hover {
+  box-shadow: 0rem 6px 13px rgba(0, 198, 255, 0.15),
+    0rem 24px 24px rgba(0, 198, 255, 0.12),
+    0rem 55px 33px rgba(10, 60, 255, 0.08),
+    0rem 97px 39px rgba(10, 60, 255, 0.03), 0rem 152px 43px rgba(0, 198, 255, 0);
+  scale: 1.05;
+  color: #000000;
+}
+
+@keyframes moving {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.05);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    gap: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .hero {
+    height: 300px;
+  }
+
+  .card {
+    width: 95%;
+    max-width: 100%;
+  }
+
+  .content {
+    padding: 20px;
+    gap: 16px;
+  }
+
+  .content .heading {
+    font-size: 24px;
+  }
+
+  .content .para {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .description {
+    padding: 2rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    padding: 0.8rem 1rem;
+  }
+
+  .logo {
+    font-size: 1.3rem;
+  }
+
+  .nav-links {
+    gap: 0.5rem;
+    font-size: 0.75rem;
+  }
+
+  .hero {
+    height: 250px;
+  }
+
+  .boat-icon {
+    font-size: 2rem;
+  }
+
+  .card {
+    width: 100%;
+    padding: 1px;
+  }
+
+  .content {
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .content .heading {
+    font-size: 20px;
+  }
+
+  .content .para {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .description {
+    padding: 1.5rem 0.5rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.boat-icon {
+  display: inline-block;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+/* ======== Reservasi & Pemesanan ======== */
+.reservasi-section {
+  background: url(Reservasi.jpg);
+  padding: 4rem 2rem;
+}
+
+#reservasi {
+  background: url("asset/Reservasi.jpg") center center/cover no-repeat;
+  padding: 4rem 2rem;
+  position: relative;
+}
+
+/* Tambahkan overlay biar teks tetap jelas dibaca */
+#reservasi::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.85); /* ubah opacity sesuai kebutuhan */
+  z-index: 0;
+}
+
+#reservasi > div {
+  position: relative;
+  z-index:1;
+}
+
+
+.reservasi-container {
+  background: rgba(255, 255, 255, 0.92);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 3rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.reservasi-container h2 {
+  text-align: center;
+  color: #2d5f3f;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+}
+
+.reservasi-container p {
+  text-align: center;
+  color: #444;
+  font-size: 14px;
+  margin-bottom: 2rem;
+}
+
+.reservasi-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.reservasi-form label {
+  font-weight: bold;
+  color: #2d5f3f;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.reservasi-form input,
+.reservasi-form select,
+.reservasi-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.reservasi-form textarea {
+  resize: vertical;
+}
+
+.reservasi-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.reservasi-row div {
+  flex: 1;
+}
+
+#formReservasi button {
+  background: linear-gradient(135deg, #00a8cc, #0097b8);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 168, 204, 0.4);
+}
+
+#formReservasi button:hover {
+  background: linear-gradient(135deg, #0097b8, #00a8cc);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 168, 204, 0.6);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .reservasi-container {
+    padding: 1.5rem;
+  }
+
+  .reservasi-row {
+    flex-direction: column;
+  }
+}
+/* =============================== */
+/* HALAMAN HUBUNGI KAMI */
+/* =============================== */
+
+.hubungi-header {
+  background-color: #A7E6FF;
+  padding: 40px 60px;
+}
+
+.hubungi-header h1 {
+  margin: 0;
+  font-size: 2.8em;
+  color: #000;
+  font-weight: 700;
+}
+
+.hubungi-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 80px 60px;
+  gap: 50px;
+  background-color: #fff;
+}
+
+/* Kolom kiri */
+.hubungi-left {
+  flex: 1;
+}
+
+.hubungi-left h2 {
+  font-size: 1.3em;
+  margin-bottom: 12px;
+  color: #004aad;
+}
+
+.hubungi-left p {
+  font-size: 1em;
+  color: #000;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.hubungi-left a {
+  color: #000;
+  text-decoration: none;
+}
+
+.hubungi-left a:hover {
+  text-decoration: underline;
+}
+
+/* More Information */
+.more-info {
+  margin-top: 40px;
+}
+
+.more-info .info-columns {
+  display: flex;
+  gap: 50px;
+  margin-top: 15px;
+}
+
+.more-info .info-columns a {
+  display: block;
+  color: #000;
+  font-size: 0.95em;
+  margin-bottom: 8px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.more-info .info-columns a:hover {
+  color: #00a86b;
+}
+
+/* Kolom kanan */
+.hubungi-right {
+  flex: 1;
+}
+
+.hubungi-right h2 {
+  font-size: 1.3em;
+  margin-bottom: 10px;
+  color: #004aad;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  gap: 15px;
+  font-size: 1.4em;
+  margin: 10px 0 15px;
+}
+
+.social-icons i {
+  cursor: pointer;
+  color: #000;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons i:hover {
+  color: #00a86b;
+  transform: scale(1.2);
+}
+
+.part-of {
+  font-size: 0.9em;
+  color: #333;
+  margin-top: 10px;
+}
+.modal {
+  display: none; /* Sembunyikan secara default */
+  position: fixed; /* Tetap di tempat */
+  z-index: 200; /* Letakkan di atas semua konten lain */
+  padding-top: 60px; /* Jarak dari atas */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Aktifkan scrolling jika konten terlalu besar */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9); /* Hitam dengan opacity */
+}
+
+/* Konten Gambar di dalam Modal */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  max-height: 90vh; /* Agar tidak terlalu besar di layar kecil */
+  object-fit: contain; /* Memastikan gambar pas dan tidak terpotong */
+}
+
+/* Teks Caption di bawah gambar */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+  font-weight: bold;
+}
+
+/* Animasi Zoom */
+.modal-content,
+#caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* Tombol Close */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  z-index: 201; /* Pastikan di atas modal */
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Responsif untuk layar kecil */
+@media only screen and (max-width: 700px) {
+  .modal-content {
+    width: 100%;
+  }
+}
+

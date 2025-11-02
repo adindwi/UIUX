@@ -1,0 +1,157 @@
+/* === RESET DASAR === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* === LAYOUT UTAMA === */
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* === KIRI: FORM === */
+.left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 40px;
+  position: relative;
+}
+
+/* BOX PUTIH SEPERTI LOGIN */
+.form-box {
+  width: 90%;
+  max-width: 420px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.form-box h2 {
+  font-size: 30px;
+  color: #000000;
+  margin-bottom: 8px;
+}
+
+.form-box p {
+  color: #333;
+  margin-bottom: 25px;
+  font-size: 14px;
+}
+
+/* === INPUT === */
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #000000;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 18px;
+  border: none;
+  border-radius: 8px;
+  background-color: #D9D9D9;
+  font-size: 15px;
+  color: #000000;
+}
+
+input::placeholder {
+  color: #555;
+}
+
+/* === CHECKBOX === */
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.checkbox-container input {
+  width: 18px;
+  height: 18px;
+}
+
+/* === TOMBOL === */
+.btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #24BAEB;
+  color: #000000;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #91BAC8;
+}
+
+/* === LINK KE LOGIN === */
+.login-link {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.login-link a {
+  color: #24BAEB;
+  text-decoration: none;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+/* === KANAN: GAMBAR === */
+.right {
+  flex: 1;
+}
+
+.right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column-reverse;
+  }
+
+  .right {
+    height: 40vh;
+  }
+
+  .left {
+    height: 60vh;
+  }
+
+  .form-box {
+    max-width: 320px;
+    padding: 30px;
+  }
+}

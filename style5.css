@@ -1,0 +1,436 @@
+/* styles.css - gabungan style project */
+
+/* Reset & dasar */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Navbar */
+header {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 60px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: 90px; /* tinggi navbar */
+}
+
+/* Logo */
+.logo img {
+  height: 120px; /* ukuran logo besar */
+  width: auto;
+  position: absolute;
+  top: 40%; /* posisi vertikal logo */
+  transform: translateY(-50%);
+}
+
+/* Navigasi */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #004aad;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: #00a86b;
+}
+
+/* Warna tambahan opsional */
+.green { color: #00a86b; }
+.blue { color: #004aad; }
+
+/* ===== HERO SECTION ===== */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* memenuhi tinggi layar penuh */
+  overflow: hidden;
+}
+
+/* Gambar latar belakang */
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* agar gambar tetap proporsional dan menutupi layar */
+  display: block;
+  filter: brightness(85%); /* sedikit gelap agar teks di atasnya terlihat */
+}
+
+/* Teks di atas gambar */
+.hero-content {
+  position: absolute !important;
+  top: 50% !important;
+  left: 0 !important;
+  transform: translateY(-50%) !important;
+  text-align: left !important;
+  padding-left: 80px !important; /* jarak dari sisi kiri */
+  width: 60% !important; /* biar tidak terlalu lebar */
+  color: #fff;
+}
+  
+.hero-section .hero-content {
+  left: 8% !important;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+
+/* ===== Kondisi Lingkungan (4 kolom sejajar) ===== */
+.kondisi-section{
+  background:#b8ebf1;
+  padding:60px 0;
+}
+.kondisi-section h2{
+  color:#003366;
+  font-size:28px;
+  text-align:center;
+  margin-bottom:36px;
+}
+.kondisi-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
+  flex-wrap: nowrap; /* supaya semua sejajar satu baris */
+}
+
+.kondisi-box {
+  background: #fff;
+  flex: 1; /* otomatis menyesuaikan lebar agar sama rata */
+  min-width: 200px;
+  border-radius: 10px;
+  padding: 24px 18px;
+  box-shadow: 0 6px 16px rgba(3, 34, 45, 0.06);
+  text-align: center;
+  transition: transform .28s ease;
+}
+.kondisi-box:hover {
+  transform: translateY(-8px);
+}
+
+.kondisi-box img{ width:100px; height:100px; object-fit:contain; margin-bottom:10px; }
+.kondisi-box h3{ color:#0047ba; margin-bottom:6px; }
+.kondisi-box p{ color:#405a6b; font-size:14px; }
+
+/* ================= About Pantai Natuna ================= */
+.about {
+  background: linear-gradient(135deg, #ffffff 50%, #e0f7fa 100%);
+  padding: 80px 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  max-width: 1200px;
+  flex-wrap: wrap;
+}
+
+.about-image {
+  flex: 1;
+  text-align: center;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 480px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s ease;
+}
+
+.about-image img:hover {
+  transform: scale(1.05);
+}
+
+.about-content {
+  flex: 1;
+}
+
+.about-content h2 {
+  font-size: 2.3em;
+  color: #004aad;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.about-content h2::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background: #00a86b;
+  border-radius: 2px;
+}
+
+.about-content p {
+  font-size: 1.05em;
+  color: #333;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.lapor-section {
+  padding: 80px 10%;
+  background: #f9fafc;
+  text-align: center;
+}
+
+.lapor-section h2 {
+  font-size: 2rem;
+  color: #003366;
+  margin-bottom: 35px;
+}
+
+.lapor-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.lapor-image {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  justify-content: center;
+}
+
+.lapor-image img {
+  width: 100%;
+  max-width: 380px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+#laporForm {
+  flex: 1;
+  min-width: 320px;
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #333;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #006fff;
+  outline: none;
+}
+
+.btn-kirim {
+  display: inline-block;
+  width: 100%;
+  padding: 12px;
+  background-color: #006fff;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-kirim:hover {
+  background-color: #004fbd;
+}
+
+
+
+/* ===== Footer ===== */
+/* =============================== */
+/* HALAMAN HUBUNGI KAMI */
+/* =============================== */
+
+.hubungi-header {
+  background-color: #A7E6FF;
+  padding: 40px 60px;
+}
+
+.hubungi-header h1 {
+  margin: 0;
+  font-size: 2.8em;
+  color: #000;
+  font-weight: 700;
+}
+
+.hubungi-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 80px 60px;
+  gap: 50px;
+  background-color: #fff;
+}
+
+/* Kolom kiri */
+.hubungi-left {
+  flex: 1;
+}
+
+.hubungi-left h2 {
+  font-size: 1.3em;
+  margin-bottom: 12px;
+  color: #004aad;
+}
+
+.hubungi-left p {
+  font-size: 1em;
+  color: #000;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.hubungi-left a {
+  color: #000;
+  text-decoration: none;
+}
+
+.hubungi-left a:hover {
+  text-decoration: underline;
+}
+
+/* More Information */
+.more-info {
+  margin-top: 40px;
+}
+
+.more-info .info-columns {
+  display: flex;
+  gap: 50px;
+  margin-top: 15px;
+}
+
+.more-info .info-columns a {
+  display: block;
+  color: #000;
+  font-size: 0.95em;
+  margin-bottom: 8px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.more-info .info-columns a:hover {
+  color: #00a86b;
+}
+
+/* Kolom kanan */
+.hubungi-right {
+  flex: 1;
+}
+
+.hubungi-right h2 {
+  font-size: 1.3em;
+  margin-bottom: 10px;
+  color: #004aad;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  gap: 15px;
+  font-size: 1.4em;
+  margin: 10px 0 15px;
+}
+
+.social-icons i {
+  cursor: pointer;
+  color: #000;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons i:hover {
+  color: #00a86b;
+  transform: scale(1.2);
+}
+
+.part-of {
+  font-size: 0.9em;
+  color: #333;
+  margin-top: 10px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width:1200px){
+  .container{ padding:0 28px; max-width:1100px; }
+  .kondisi-box{ width:48%; margin-bottom:18px; }
+  .hero-image{ height:480px; }
+  .about-container{ gap:36px; }
+}
+@media (max-width:768px){
+  .container{ padding:0 18px; }
+  .header-inner{ flex-direction:row; justify-content:space-between; height:72px; }
+  .nav-menu ul{ gap:16px; font-size:14px; }
+  .kondisi-box{ width:100%; }
+  .hero-image{ height:360px; }
+  .about-container{ flex-direction:column; padding:0 12px; gap:24px; }
+  .about-image, .about-content{ flex:unset; width:100%; }
+  .about-image img{ max-width:100%; border-radius:12px; }
+}
+@media (max-width:420px){
+  .brand-logo{ width:40px; }
+  .nav-menu ul{ gap:10px; font-size:13px; }
+  .hero-image{ height:300px; }
+}

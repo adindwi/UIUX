@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style4.css">
+    <title>NATUNA - Sewa Speedboat</title>
+   
+</head>
+<body>
+    <!-- Header -->
+   <!-- Navbar -->
+  <header>
+    <div class="logo">
+      <img src="asset/logo_natuna.png" alt="Logo Pantai Natuna">
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="index.html">UMKM</a></li>
+        <li><a href="Basarnas.html">BASARNAS</a></li>
+        <li><a href="fasilitas.html">Fasilitas</a></li>
+        <li><a href="index.html">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+    <!-- Hero Section -->
+    <section class="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>Keindahan Pantai Natuna</h1>
+    <p>Menikmati keindahan di tengah laut Natuna</p>
+    
+  </div>
+</section>
+
+
+    <!-- Gallery Section -->
+   <section class="gallery">
+    <h2 class="judul-gallery">Pilihan Paket Speedboat</h2>
+    <div class="gallery-grid">
+        <div class="gallery-item" data-name="Paket Warmboat">
+            <div class="image-container">
+                <img src="asset/Warmboart.jpg">
+            </div>
+        </div>
+        <div class="gallery-item" data-name="Paket Keluarga Hemat">
+            <div class="image-container">
+                <img src="asset/keluarga_hemat.jpg">
+            </div>
+        </div>
+        <div class="gallery-item" data-name="Paket Lengkap">
+            <div class="image-container">
+                <img src="asset/Paketlengkap.jpg">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Description Section with Card Effect -->
+    <section class="about">
+    <div class="about-container">
+      <div class="about-image">
+        <img src="asset/banner_penyewaan.jpg" alt="Pantai Natuna">
+      </div>
+      <div class="about-content">
+        <h2>About Pantai Natuna</h2>
+        <p>
+          Kawasan Wisata Pantai Natuna menawarkan keindahan alam yang memukau dengan pasir putih,
+          air laut yang jernih, serta panorama yang menenangkan.  
+          Fasilitas yang tersedia meliputi area parkir luas, taman bermain, spot foto, 
+          serta tempat duduk untuk menikmati suasana pantai.
+        </p>
+        <p>
+          Pantai ini menjadi destinasi wisata unggulan Kepulauan Riau dan cocok untuk
+          wisata keluarga, rekreasi alam, hingga fotografi.
+        </p>
+      </div>
+    </div>
+  </section>
+<!-- Reservasi & Pemesanan Section -->
+<section id="reservasi">
+    <div style="background: rgba(255,255,255,0.9); max-width: 800px; margin: 0 auto; padding: 2rem 3rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
+        <h2 style="text-align: center; color: #2d5f3f; margin-bottom: 0.5rem;">Reservasi & Pemesanan</h2>
+        <p style="text-align: center; color: #444; font-size: 14px; margin-bottom: 2rem;">
+            Mohon Maaf Reservasi via website paling lambat H-1, apabila reservasi di hari yang sama, kemungkinan tempat akan menyesuaikan yang tersedia. Terimakasih.
+        </p>
+
+        <form id="formReservasi" style="display: flex; flex-direction: column; gap: 1rem;">
+    <div>
+        <label style="font-weight: bold; color: #2d5f3f;">Pilihan Paket :</label>
+        <select id="paket" required style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc;">
+            <option value="">-- Pilih Paket --</option>
+            <option>Paket Warmboat</option>
+            <option>Paket Keluarga Hemat</option>
+            <option>Paket Lengkap</option>
+        </select>
+    </div>
+
+    <div>
+        <label style="font-weight: bold; color: #2d5f3f;">Nama Pemesan :</label>
+        <input type="text" id="nama" placeholder="Nama Lengkap" required style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc;">
+    </div>
+
+    <div>
+        <label style="font-weight: bold; color: #2d5f3f;">Email Pemesan :</label>
+        <input type="email" id="email" placeholder="contoh@email.com" required style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc;">
+    </div>
+
+    <div>
+        <label style="font-weight: bold; color: #2d5f3f;">No. Hp / Telp :</label>
+        <input type="tel" id="telepon" placeholder="08xxxxxxxxxx" required style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc;">
+    </div>
+
+    <div style="display: flex; gap: 1rem;">
+        <div style="flex: 1;">
+            <label style="font-weight: bold; color: #2d5f3f;">Hari / Tanggal :</label>
+            <input type="date" id="tanggal" required style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc;">
+        </div>
+        <div style="flex: 1;">
+            <label style="font-weight: bold; color: #2d5f3f;">Jam :</label>
+            <input type="time" id="jam" required style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc;">
+        </div>
+    </div>
+
+    <div>
+        <label style="font-weight: bold; color: #2d5f3f;">Pilihan Tempat :</label>
+        <select id="tempat" required style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc;">
+            <option value="">-- Pilih Tempat --</option>
+            <option>Meja</option>
+            <option>Lesehan</option>
+            <option>Indoor</option>
+            <option>Outdor</option>
+        </select>
+    </div>
+
+    <div>
+        <label style="font-weight: bold; color: #2d5f3f;">Keterangan (Request Tambahan):</label>
+        <textarea id="keterangan" rows="4" placeholder="Tuliskan permintaan tambahan..." style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc;"></textarea>
+    </div>
+
+   <button type="submit" onclick="kirimReservasi()">Kirim via WhatsApp</button>
+
+
+</form>
+
+    </div>
+</section>
+<!-- =============================== -->
+<!-- HUBUNGI KAMI SECTION -->
+<!-- =============================== -->
+
+<!-- Header -->
+<section class="hubungi-header">
+  <h1>Hubungi Kami</h1>
+</section>
+
+<!-- Kontainer utama -->
+<section class="hubungi-container">
+  <div class="hubungi-left">
+    <h2>GET IN TOUCH</h2>
+    <p><b>Alamat:</b><br>
+      Kawasan Marina<br>
+      Jalan Soekarno Hatta, Labuan Bajo<br>
+      West Manggarai, NTT 86711
+    </p>
+
+    <p><b>Email:</b> 
+      <a href="mailto:ahmadfizaky@gmail.com">ahmadfizaky@gmail.com</a>
+    </p>
+
+    <p><b>Phone:</b> +62 385 24-40234</p>
+    <p><b>WhatsApp:</b> +62 813-3848-9939</p>
+
+    <div class="more-info">
+      <h2>MORE INFORMATION</h2>
+      <div class="info-columns">
+        <div>
+          <a href="#">Contact Us</a>
+          <a href="#">Careers</a>
+          <a href="#">About</a>
+        </div>
+        <div>
+          <a href="#">Privacy Policy</a>
+          <a href="#">News</a>
+          <a href="#">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hubungi-right">
+    <h2>CONNECT WITH US</h2>
+    <div class="social-icons">
+      <i class="fab fa-facebook-f"></i>
+      <i class="fab fa-instagram"></i>
+      <i class="fab fa-whatsapp"></i>
+      <i class="fab fa-twitter"></i>
+      <i class="fab fa-youtube"></i>
+    </div>
+    <p class="part-of">PART OF: <strong>PT. INDONESIA PANTAI NATUNA</strong></p>
+  </div>
+</section>
+
+<div id="imageModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+<script src="script2.js"></script>  
+</body>
+</html>
